@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5</title>
+</head>
+<body>
+
+    <h1> Principais formatações </h1>
+
+    <h2> Negrito / Destaque </h2>
+
+    <p> Na frase temos uma <b> parte do texto em negrito </b> usando a tag B (não semântica) </p>
+
+    <p> Na frase temos uma <strong> parte do texto em negrito </strong> usando a tag strong (com semântica) </p>
+
+    <br>
+
+    <h1> Itálico / Ênfase </h1>
+
+    <p> Nesta frase vamos tentar com uma palavra em <i> Itálico </i> usando tag i (não semântica)  </p>
+
+    <p> Nesta frase vamos tentar com uma palavra em <em> Itálico </em> usando tag EM (com semântica) </p>
+    
+    <br>
+
+    <h1> Texto Marcador </h1>
+
+    <p> Aqui vamos usar um texto com destaque <mark><mark<mark style="background: goldenrod;"> marcador de texto</mark> usando mark </p>
+
+    <p> Aqui vamos usar um texto com destaque <mark><mark<mark style="background:crimson;"> marcador de texto</mark> usando mark </p>
+    
+    <br>
+    
+    <h1> Texto grande e pequeno </h1>
+    
+    <p> Estamos trabalhando aqui com um <big>TEXTO GRANDE</big> e um <small>texto pequeno</small> nesta frase </p>
+    
+    <br>
+
+    <h1>Testo inserido</h1>
+
+    <p> Nexta frase vamos demonstrar como <ins>destacar um texto inserido</ins> na frase de forma semântica</p>
+
+    <p> Nexta frase vamos demonstrar como <u>destacar um texto inserido</u> na frase de forma não semântica </p>
+    
+    <br>
+
+    <h1> Texto sobrescrito </h1>
+        
+    <p>vamos demonstrar uma formula de equação do segundo grau <sub> ax² + bx + c = 0 </sub> usando tag sup </p>
+
+    <br>
+
+    <h1> Texto de código fonte </h1>
+    
+    <p> Neste exemplo vou demostrar um trecho de código 
+        <pre>
+            <code> 
+ 
+import pygame
+import random
+random.seed()
+import json
+pygame.init()
+with open("./game/Personagens/PC.json", "r") as f:
+    PC = json.load(f)
+with open("./game/Personagens/NPC.json", "r") as g:
+    NPC = json.load(g)
+
+#####
+
+class Personagem:
+    print("A")
+    def __init__(self, nome, ataque, defesa, vidaMaxima, velocidade):
+        self.nome = nome #
+        self.ataque = ataque #
+        self.defesa = defesa #
+        self.vidaMaxima = self.vidaAtual = vidaMaxima #
+        self.velocidade = velocidade #
+        self.podeSerEscolhido = True
+        self.defendendo = False
+        print("B")
+    def atualizarVida(self, dano):
+        if dano > 0 and self.vidaAtual + dano > self.vidaMaxima:
+            self.vidaAtual = self.vidaMaxima
+        elif dano < 0 and self.vidaAtual + dano <= 0:
+            self.vidaAtual = 0
+        else:
+            self.vidaAtual += dano
+    def estaDefendendo(self):
+        return self.defendendo
+
+    def defender(self):
+        if not self.estaDefendendo():
+            self.defesa *= 2
+            self.defendendo = True
+
+    def pararDeDefender(self):
+        if self.estaDefendendo():
+            self.defesa = int(self.defesa * 0.5)
+            self.defendendo = False
+    
+def verdano(atacante, defensor):
+    dano = 0
+    if atacante.ataque - defensor.defesa > 5:
+        dano = atacante.ataque - defensor.defesa
+    if (atacante.ataque - defensor.defesa < 5) and (atacante.ataque > 0):
+        dano = 5
+    if atacante.ataque < 0:
+        dano = atacante.ataque
+    vidaDodefensor=defensor.vidaAtual
+    return (f"{dano}. ainda tem {vidaDodefensor}")
+
+def calcularDanoAtaqueBasico(atacante, defensor):
+    dano = 0
+    if atacante.ataque - defensor.defesa > 5:
+        dano = atacante.ataque - defensor.defesa
+    if (atacante.ataque - defensor.defesa < 5) and (atacante.ataque > 0):
+        dano = 5
+    if atacante.ataque < 0:
+        dano = atacante.ataque
+    defensor.atualizarVida(-1 * dano)
+    # se ataque - defesa for mais que 5 da dano, caso for menos mas maior que zero da 5 de dano, caso for menor que zero vai curar
+
+def checarMorte(lista):
+    for elemento in lista:
+        if elemento.vidaAtual <= 0:
+            return elemento
+        return False
+    # vida == zero = morreu
+    
+def proximoIndice(indice, lista):
+    tamanhoLista = len(lista)
+    if indice + 1 >= tamanhoLista:
+        indice = 0
+    else:
+        indice += 1
+    return indice
+            </code> </p>
+        </pre>
+        <br>
+
+        <h1>Citações (quotation) simples </h1>
+
+        <p> segundo Steve Jobs <q>A tecnologia move o mundo</q></p>
+
+        <h1>Citações completas (livros) </h1>
+
+        <p>Segundo sandra kussunoki no seu livro A dança e o ventre: 
+            <blockquote> 
+                existem sobre intervenções cirrúgicas nos corpos contemporâneos visando á obtenção de um 
+                corpo mais próximo do padão estético tais como lipoaspiração, proteses de silicone, entre outros, 
+                comprovam essa busca obsessiva pelo ideal de perfeição, que é baseado principalmente na magreza. 
+            </blockquote> </p>
+        
+            <br>
+
+        <h1>Abreviações</h1>
+
+        <p>Estamos estudando <abbr title="Hypertext Markup Language">HTML</abbr> e <abbrr title="Cascading Style Sheets">CSS</abbrr></p>
+
+        <br>
+
+        <h1>Texto Invertido</h1>
+        <p>Estou estudando HTML</p>
+        <p> <bdo dir="rtl"> Estou estudando HTML</bdo></p>
+
+</body>
+</html>

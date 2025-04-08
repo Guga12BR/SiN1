@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: brown;
+    background-color: lightgray;
+}
+
+h1 {
+    font-size: 2em;
+    color: white;
+    background-color: lightsalmon;
+}
+
+h2 {
+    color: brown;
+}
+
+p {
+    color: blue;
+    font-size: small;
+}
+a {
+    color: darkturquoise;
+    font-size: small;
+}

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body {
+    background-color: #4D5057;
+    color: #CFCFCF;
+    text-align: center
+}
+
+
+
+ol,
+ul {
+    list-style-position: inside
+}
+
+h1,
+h2,
+h3,
+h4 {
+    background-color: #D16666;
+}
+
+p {font-size: medium;}
+
+
+thead,
+tfoot {
+    background-color: #2c5e77;
+    color: #4F9D69
+}
+
+
+
+tbody {
+    background-color: #5b5f68;
+    color: #2191FB
+}
+
+
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #8c8c8c;
+    font-family: sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px
+}
+
+
+
+th,
+td {
+    border: 1px solid #8c8c8c;
+    padding: 8px 10px
+}
+
+
+td {
+    text-align: center
+}

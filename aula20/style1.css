@@ -1,0 +1,12 @@
+
+form{
+    background-color: antiquewhite;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+};
+
+#Resposta{
+    background-color: rgb(255, 196, 196);
+};

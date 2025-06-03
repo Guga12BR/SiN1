@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 21</title>
+</head>
+<body>
+    <form action="" method="get" id="Calcular_Idade" onsubmit="Calcular_Idade()">
+        <label for="dia">Data De Nascimento: </label>
+        <input type="number" id="dia" placeholder="Dia">
+        <select name="mes" id="mes">
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select>
+        <input type="number" id="ano" placeholder="Ano"><br><br>
+        <button type="submit">Calcular Ano</button><br><br><br><br>
+        <h1 id="resposta_Idade"></h1>
+    </form>
+    <form action="" method="get" id="Calculadora" onsubmit="Calculadora()">
+        <input type="number" id="num1">
+        <select name="sinal" id="sinal">
+            <option value="1"> +  </option>
+            <option value="2"> -  </option>
+            <option value="3"> x  </option>
+            <option value="4"> /  </option>
+        </select>
+        <input type="number" id="num2"><br><br>
+        <button type="submit">Calcular</button>
+        <h1 id="Resposta_Calc"></h1>
+    </form>
+    <script src="script.js" type="text/JavaScript"></script></body>
+</html>
